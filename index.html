@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta content="utf-8" http-equiv="encoding" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My notes</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="header-img"></div>
+    <div class="container">
+      <div class="column">
+        <h1>Notes dApp</h1>
+        <p>Doing notes!</p>
+        <br />
+        <input type="text" name="note" id="note" />
+        <button onclick="setNote()">Set note</button>
+        <button onclick="getNote()">Get note</button>
+        <p>Note: <span id="note"></span></p>
+      </div>
+    </div>
+  </body>
+</html>
