@@ -47,7 +47,7 @@ let signer;
 let contract;
 
 window.onload = function() {
-    provider = new ethers.providers.Web3Provider(window.etherum, 97);
+    provider = new ethers.providers.Web3Provider(window.ethereum, 97);
     provider.send("eth_requestAccounts", []).then(() => {
         provider.listAccounts().then((accounts) => {
           signer = provider.getSigner(accounts[0]);
@@ -61,11 +61,12 @@ window.onload = function() {
 
 
 async function setNote() {
-  const node = document.getElementById("note").value;
-  await contract.setNode(note);
+  const note = document.getElementById("noteinput").value;
+  await contract.setNote(note+"[test]");
 }
 
 async function getNote() {
   const note = await contract.getNote();
+  console.log('note is' + note);
   document.getElementById("note").innerText = note;
 }
